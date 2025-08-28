@@ -86,7 +86,7 @@ func SSAndRead(x1 int, y1 int, x2 int, y2 int) {
 	f, err := os.Create("image.png")
 	if err != nil {
 		zenity.Error(err.Error(),
-			zenity.Title("Image Creation Error"), zenity.ErrorIcon)
+			zenity.Title(err.Error()), zenity.ErrorIcon)
 	}
 	defer f.Close()
 
@@ -138,6 +138,8 @@ func main() {
 
 	version_curr := "0.0.0"
 	fmt.Println("FPSCR Version " + version_curr)
+
+	fmt.Println("Dont worry about this window")
 
 	for {
 		if started {

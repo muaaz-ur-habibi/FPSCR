@@ -1,0 +1,1 @@
+go build -o FPSCR.exe main.go
